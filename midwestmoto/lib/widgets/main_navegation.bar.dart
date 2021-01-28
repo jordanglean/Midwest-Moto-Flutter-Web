@@ -5,12 +5,53 @@ class MainNavegationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      decoration: BoxDecoration(
+        color: Colors.white,
+      ),
+      padding:
+          EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0, right: 20.0),
       height: 80.0,
       width: (MediaQuery.of(context).size.width),
-      child: Text(
-        'Hello',
-        style: TextStyle(color: Colors.white),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          // Left Nav Items
+          Container(
+              child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              FlatButton(
+                onPressed: () {},
+                child: Text('Indian Motorcycles'.toUpperCase()),
+              ),
+              FlatButton(
+                onPressed: () {},
+                child: Text('Online Shop'.toUpperCase()),
+              ),
+            ],
+          )),
+          // Center Logo
+          Image.network(
+              '//cdn.shopify.com/s/files/1/0403/0336/2215/files/MWM_WINGS_LOGO_Indian_Red-1-removebg_150x.png?v=1591694781'),
+          // Right Nav Items
+          Container(
+              child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              FlatButton(
+                onPressed: () {},
+                child: Text('Servicing'.toUpperCase()),
+              ),
+              FlatButton(
+                onPressed: () {},
+                child: Text('Offers'.toUpperCase()),
+              ),
+              FlatButton(
+                  onPressed: () {}, child: Text('Contact Us'.toUpperCase())),
+            ],
+          )),
+        ],
       ),
     );
   }
