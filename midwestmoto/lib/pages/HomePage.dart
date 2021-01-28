@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
+// Widget Imports
+// -- global widgets
+import 'package:midwestmoto/widgets/main_navegation.bar.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Center(
-          child: Image.network(
-            'https://cdn.shopify.com/s/files/1/0403/0336/2215/files/MWM_WINGS_LOGO_Indian_Red-1-removebg_150x.png?v=1591694781',
-            width: 70,
-          ),
-        ),
-      ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.greenAccent.shade200,
       extendBody: true,
+      // Floating Action Button
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
         child: Icon(
@@ -24,6 +19,7 @@ class HomePage extends StatelessWidget {
         onPressed: () {},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      // Bottom Navegation Bar
       bottomNavigationBar: BottomAppBar(
         notchMargin: 4.0,
         shape: CircularNotchedRectangle(),
@@ -47,19 +43,13 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          FractionallySizedBox(
-            heightFactor: 200,
-            child: Container(
-              width: double.infinity,
-              child: Text(
-                'SAMPLE CONTAINER',
-                style: TextStyle(backgroundColor: Colors.white),
-              ),
-            ),
-          )
-        ],
+      // Home Page Body
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            MainNavegationBar(),
+          ],
+        ),
       ),
     );
   }
