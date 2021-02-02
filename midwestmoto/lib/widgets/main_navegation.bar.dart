@@ -23,11 +23,18 @@ class MainNavegationBar extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                 onPressed: () {},
-                child: Text('Indian Motorcycles'.toUpperCase()),
+                child: Text(
+                  'Indian Motorcycles'.toUpperCase(),
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
+              Padding(padding: EdgeInsets.all(18.0)),
               FlatButton(
                 onPressed: () {},
-                child: Text('Online Shop'.toUpperCase()),
+                child: Text(
+                  'Online Shop'.toUpperCase(),
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
             ],
           )),
@@ -41,14 +48,26 @@ class MainNavegationBar extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                 onPressed: () {},
-                child: Text('Servicing'.toUpperCase()),
+                child: Text(
+                  'Servicing'.toUpperCase(),
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
+              Padding(padding: EdgeInsets.all(18.0)),
               FlatButton(
                 onPressed: () {},
-                child: Text('Offers'.toUpperCase()),
+                child: Text(
+                  'Offers'.toUpperCase(),
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
+              Padding(padding: EdgeInsets.all(18.0)),
               FlatButton(
-                  onPressed: () {}, child: Text('Contact Us'.toUpperCase())),
+                  onPressed: () {},
+                  child: Text(
+                    'Contact Us'.toUpperCase(),
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  )),
             ],
           )),
         ],
