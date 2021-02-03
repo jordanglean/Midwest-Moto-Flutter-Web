@@ -8,8 +8,12 @@ class MainNavegationBar extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
       ),
-      padding:
-          EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0, right: 20.0),
+      padding: EdgeInsets.only(
+        top: 10.0,
+        bottom: 10.0,
+        left: 30.0,
+        right: 30.0,
+      ),
       height: 80.0,
       width: (MediaQuery.of(context).size.width),
       child: Row(

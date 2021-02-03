@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 // -- global widgets
 import 'package:midwestmoto/widgets/main_navegation.bar.dart';
 import 'package:midwestmoto/widgets/above_main_header_small_info_container.dart';
-// -- local imports
+// -- local  imports
 import 'package:midwestmoto/widgets/home_page/home_page_top_banner.dart';
 import 'package:midwestmoto/widgets/home_page/home_page_brand_logo.dart';
+import 'package:midwestmoto/widgets/home_page/our_story.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -57,6 +58,8 @@ class HomePage extends StatelessWidget {
             HomePageBanner(),
             // Brands Logo List
             BrandsLogoListWidget(),
+            // Our Story Widget
+            OurStoryWidget(),
           ],
         ),
       ),
