@@ -8,7 +8,7 @@ class HomePageBanner extends StatelessWidget {
       children: <Widget>[
         Container(
           height: 600,
-          width: 1600,
+          width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/images/home_page/bg.jpg'),

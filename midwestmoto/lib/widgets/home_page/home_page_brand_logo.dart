@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 // Brands Logo List
 class BrandsLogoListWidget extends StatelessWidget {
@@ -15,11 +14,11 @@ class BrandsLogoListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
-      width: 1600,
-      height: 100,
-      padding: EdgeInsets.all(15),
-      margin: EdgeInsets.only(top: 5),
+      color: Colors.white54,
+      width: double.infinity,
+      height: 130,
+      padding: EdgeInsets.all(30),
+      margin: EdgeInsets.only(top: 0.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,

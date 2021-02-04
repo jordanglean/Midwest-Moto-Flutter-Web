@@ -7,12 +7,15 @@ import 'package:midwestmoto/widgets/above_main_header_small_info_container.dart'
 import 'package:midwestmoto/widgets/home_page/home_page_top_banner.dart';
 import 'package:midwestmoto/widgets/home_page/home_page_brand_logo.dart';
 import 'package:midwestmoto/widgets/home_page/our_story.dart';
+import 'package:midwestmoto/widgets/home_page/featured_motorcycles.dart';
+import 'package:midwestmoto/widgets/home_page/see_offers_banner.dart';
+import 'package:midwestmoto/widgets/home_page/shop_panda.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.grey.shade200,
       extendBody: true,
       // Floating Action Button
       floatingActionButton: FloatingActionButton(
@@ -60,6 +63,15 @@ class HomePage extends StatelessWidget {
             BrandsLogoListWidget(),
             // Our Story Widget
             OurStoryWidget(),
+            // Featured Motorcycle Widget Container
+            FeaturedMotorcycleWidget(),
+            // See Offer Widget
+            SeeOfferWidget(),
+            // Shop Parts and Apparels
+            Padding(padding: EdgeInsets.all(5)),
+            ShopPartAndApparel(),
+            // Temp Spacer
+            Padding(padding: EdgeInsets.all(20)),
           ],
         ),
       ),
