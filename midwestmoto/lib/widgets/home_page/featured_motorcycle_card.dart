@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:midwestmoto/pages/MotorcyclePage.dart';
 
 // Featured Motorcycle Widget Card
 class FeaturedMotorcycleCardWidget extends StatelessWidget {
@@ -81,7 +82,14 @@ class FeaturedMotorcycleCardWidget extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return MotorcyclePage();
+                  }),
+                );
+              },
             ),
           ),
         ],

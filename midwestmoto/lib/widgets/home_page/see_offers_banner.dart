@@ -5,6 +5,7 @@ class SeeOfferWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(50),
       color: Colors.black,
       width: double.infinity,
       height: 100,

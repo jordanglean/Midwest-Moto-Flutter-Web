@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:midwestmoto/pages/HomePage.dart';
+import 'package:midwestmoto/pages/MotorcyclePage.dart';
 
 void main() => runApp(MyApp());
 

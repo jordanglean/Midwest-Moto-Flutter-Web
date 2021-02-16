@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // -- global widgets
 import 'package:midwestmoto/widgets/main_navegation.bar.dart';
 import 'package:midwestmoto/widgets/above_main_header_small_info_container.dart';
+import 'package:midwestmoto/widgets/footer.dart';
 // -- local  imports
 import 'package:midwestmoto/widgets/home_page/home_page_top_banner.dart';
 import 'package:midwestmoto/widgets/home_page/home_page_brand_logo.dart';
@@ -72,6 +73,8 @@ class HomePage extends StatelessWidget {
             ShopPartAndApparel(),
             // Temp Spacer
             Padding(padding: EdgeInsets.all(20)),
+            // Footer
+            MainFooter(),
           ],
         ),
       ),

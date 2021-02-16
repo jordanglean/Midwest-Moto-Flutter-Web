@@ -43,9 +43,18 @@ class ShopHomeCards extends StatelessWidget {
               ],
             ),
           ),
-          RaisedButton(
-            onPressed: () {},
-            child: Text("Shop Men's"),
+          Spacer(),
+          ButtonTheme(
+            minWidth: double.infinity,
+            height: 60,
+            child: RaisedButton(
+              color: Colors.black,
+              onPressed: () {},
+              child: Text(
+                "Shop Men's",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
           )
         ],
       ),

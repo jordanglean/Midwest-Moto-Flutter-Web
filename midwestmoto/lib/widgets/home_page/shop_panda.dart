@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// Dependecies Import
 // Widget Imports
 import 'package:midwestmoto/widgets/home_page/shop_panda_card.dart';
 
