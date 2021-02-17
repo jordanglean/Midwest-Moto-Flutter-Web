@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:imageview360/imageview360.dart';
-import 'package:midwestmoto/widgets/bike_page/basic_info.dart';
 
 // Image 360 Viewer
+// ignore: must_be_immutable
 class ImageView360Container extends StatefulWidget {
-  @override
+  // Properties
+  final List<ImageProvider> imageList;
+  // Constructor
+  ImageView360Container({Key key, @required this.imageList})
+      : super(
+          key: key,
+        );
+
   _ImageView360State createState() => _ImageView360State();
 }
 
@@ -13,20 +20,28 @@ class _ImageView360State extends State<ImageView360Container> {
 
   @override
   Widget build(BuildContext context) {
-    List<ImageProvider> imageList = [];
-    for (var i = 0; i < 7; i++) {
-      if (i == 7) {
-        break;
-      }
-      imageList.add(
-          AssetImage('assets/images/bikes/indian/ftr_base/ftr_base_$i.jpg'));
-    }
     return Container(
       width: 950,
       margin: EdgeInsets.all(20),
-      child: ImageView360(
-        key: UniqueKey(),
-        imageList: imageList,
+      child: Stack(
+        children: <Widget>[
+          ImageView360(
+            key: UniqueKey(),
+            imageList: widget.imageList,
+            autoRotate: true,
+            swipeSensitivity: 2,
+            allowSwipeToRotate: true,
+          ),
+          Positioned(
+            left: 0,
+            bottom: 0,
+            child: Container(
+              width: 950,
+              height: 50,
+              child: Icon(Icons.party_mode),
+            ),
+          ),
+        ],
       ),
     );
   }

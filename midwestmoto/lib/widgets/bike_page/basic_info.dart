@@ -6,7 +6,7 @@ class BasicBikeInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey.shade300,
-      width: 800,
+      width: 900,
       height: 550,
       padding: EdgeInsets.all(20),
       child: Column(
@@ -115,36 +115,95 @@ class BasicBikeInfo extends StatelessWidget {
                 Padding(padding: EdgeInsets.all(20)),
                 // Bike Details
                 Container(
-                  height: 200,
-                  width: 300,
-                  child: Card(
-                    elevation: 5,
-                    child: Container(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: [
-                          Icon(Icons.motorcycle),
-                          Text(
-                            '140 Miles',
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                  margin: EdgeInsets.only(top: 25),
+                  height: 300,
+                  width: 400,
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          Container(
+                            child: Column(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.today,
+                                  size: 50,
+                                ),
+                                Text(
+                                  'Reg Year:\n 2021',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
                           ),
-                          Spacer(),
-                          Icon(
-                            Icons.date_range,
-                          ),
-                          Text(
-                            '2021',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Spacer(),
-                          Icon(Icons.verified_user_rounded),
-                          Text(
-                            '2 Owners',
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          Container(
+                            child: Column(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.two_wheeler,
+                                  size: 50,
+                                ),
+                                Text(
+                                  'Miles:\n 0',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
-                    ),
+                      Padding(padding: EdgeInsets.all(18)),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          Container(
+                            child: Column(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.sports_motorsports,
+                                  size: 50,
+                                ),
+                                Text(
+                                  'Owners:\n 1',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            child: Column(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.colorize,
+                                  size: 50,
+                                ),
+                                Text(
+                                  'Colour:\n Black',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 )
               ],

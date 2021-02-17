@@ -11,6 +11,8 @@ import 'package:midwestmoto/widgets/home_page/our_story.dart';
 import 'package:midwestmoto/widgets/home_page/featured_motorcycles.dart';
 import 'package:midwestmoto/widgets/home_page/see_offers_banner.dart';
 import 'package:midwestmoto/widgets/home_page/shop_panda.dart';
+// -- pages imports
+import 'package:midwestmoto/pages/indian_motorcycles/ScoutPage.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -37,7 +39,14 @@ class HomePage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlatButton(onPressed: () {}, child: Text('Scout')),
+              FlatButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return ScoutPage();
+                    }));
+                  },
+                  child: Text('Scout')),
               VerticalDivider(),
               FlatButton(onPressed: () {}, child: Text('FTR 1200')),
               VerticalDivider(),

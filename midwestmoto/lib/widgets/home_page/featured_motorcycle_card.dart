@@ -3,6 +3,18 @@ import 'package:midwestmoto/pages/MotorcyclePage.dart';
 
 // Featured Motorcycle Widget Card
 class FeaturedMotorcycleCardWidget extends StatelessWidget {
+  // Properties
+  final AssetImage previewImage;
+  final String modelName;
+  final double price;
+  // Constructor
+  FeaturedMotorcycleCardWidget({
+    @required this.previewImage,
+    @required this.modelName,
+    @required this.price,
+  });
+
+  // Widget Build
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +35,7 @@ class FeaturedMotorcycleCardWidget extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image(
-            image: AssetImage('assets/images/indian_motorcycles/carbon1.jpg'),
+            image: previewImage,
           ),
           Divider(
             color: Colors.black38,
@@ -35,7 +47,7 @@ class FeaturedMotorcycleCardWidget extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      'Indian FTR R Carbon',
+                      modelName,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 25,
@@ -59,7 +71,7 @@ class FeaturedMotorcycleCardWidget extends StatelessWidget {
           Spacer(),
           Center(
             child: Text(
-              '£14,995',
+              '£' + price.toString(),
               style: TextStyle(
                 fontSize: 22,
                 color: Colors.black,

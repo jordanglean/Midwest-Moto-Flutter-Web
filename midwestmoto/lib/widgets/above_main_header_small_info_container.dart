@@ -13,10 +13,15 @@ class AboveHeaderSmallContainer extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
+          Icon(
+            Icons.location_on,
+            color: Colors.white,
+            size: 20,
+          ),
           FlatButton(
             onPressed: () {},
             child: Text(
-              'Test Ride',
+              'Directions',
               style: TextStyle(color: Colors.white),
             ),
           ),
@@ -24,10 +29,14 @@ class AboveHeaderSmallContainer extends StatelessWidget {
           Icon(
             Icons.phone,
             color: Colors.white,
+            size: 20,
           ),
           Text(
             ' 01299 822862',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
           )
         ],
       ),
