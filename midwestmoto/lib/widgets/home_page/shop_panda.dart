@@ -27,9 +27,24 @@ class ShopPartAndApparel extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              ShopHomeCards(),
-              ShopHomeCards(),
-              ShopHomeCards(),
+              ShopHomeCards(
+                cardTitle: "Men's Apparel",
+                cardDescription: 'Description',
+                imageLinkTemp:
+                    'https://www.harley-davidson.com/content/dam/h-d/images/promo-images/2021/1x1/mens-apparel-1x1.jpg?impolicy=myresize&rw=650',
+              ),
+              ShopHomeCards(
+                cardTitle: "Women's Apparel",
+                cardDescription: 'Description',
+                imageLinkTemp:
+                    'https://www.harley-davidson.com/content/dam/h-d/images/promo-images/2021/1x1/womens-apparel-1x1.jpg?impolicy=myresize&rw=650',
+              ),
+              ShopHomeCards(
+                cardTitle: 'Indian Parts',
+                cardDescription: 'Description',
+                imageLinkTemp:
+                    'https://www.harley-davidson.com/content/dam/h-d/images/promo-images/2021/1x1/parts-accessories-1x1.jpg?impolicy=myresize&rw=650',
+              ),
             ],
           ),
         ],

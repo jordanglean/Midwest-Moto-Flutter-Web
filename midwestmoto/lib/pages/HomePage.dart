@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:midwestmoto/RouteSettings.dart';
 // Widget Imports
 // -- global widgets
 import 'package:midwestmoto/widgets/main_navegation.bar.dart';
@@ -11,14 +12,12 @@ import 'package:midwestmoto/widgets/home_page/our_story.dart';
 import 'package:midwestmoto/widgets/home_page/featured_motorcycles.dart';
 import 'package:midwestmoto/widgets/home_page/see_offers_banner.dart';
 import 'package:midwestmoto/widgets/home_page/shop_panda.dart';
-// -- pages imports
-import 'package:midwestmoto/pages/indian_motorcycles/ScoutPage.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Colors.grey.shade300,
       extendBody: true,
       // Floating Action Button
       floatingActionButton: FloatingActionButton(
@@ -27,7 +26,9 @@ class HomePage extends StatelessWidget {
           Icons.call_outlined,
           size: 30,
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, contactUsRoute);
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       // Bottom Navegation Bar
@@ -41,22 +42,44 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return ScoutPage();
-                    }));
+                    Navigator.pushNamed(context, scoutModelsRoute,
+                        arguments: 'dATA FROM MAIN PAGE');
                   },
                   child: Text('Scout')),
               VerticalDivider(),
-              FlatButton(onPressed: () {}, child: Text('FTR 1200')),
+              FlatButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, ftrModelsRoute);
+                  },
+                  child: Text('FTR 1200')),
               VerticalDivider(),
-              FlatButton(onPressed: () {}, child: Text('Cruiser')),
+              FlatButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, cruiserModels);
+                  },
+                  child: Text('Cruiser')),
               VerticalDivider(),
-              FlatButton(onPressed: () {}, child: Text('Bagger')),
-              FlatButton(onPressed: () {}, child: Text('Touring')),
-              FlatButton(onPressed: () {}, child: Text('Challenger')),
+              FlatButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, baggerModelsRoute);
+                  },
+                  child: Text('Bagger')),
+              FlatButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, touringModelsRoute);
+                  },
+                  child: Text('Touring')),
+              FlatButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, challengerModelsRoute);
+                  },
+                  child: Text('Challenger')),
               VerticalDivider(),
-              FlatButton(onPressed: () {}, child: Text('Other Brands'))
+              FlatButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, otherModels);
+                  },
+                  child: Text('Other Brands'))
             ],
           ),
         ),

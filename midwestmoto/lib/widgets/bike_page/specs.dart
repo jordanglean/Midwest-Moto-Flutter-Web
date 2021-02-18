@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// Local Widget Imports
+import 'package:midwestmoto/widgets/bike_page/accessories.dart';
 
 // Bike Description
 class Specs extends StatelessWidget {
@@ -27,6 +29,7 @@ class Specs extends StatelessWidget {
           Divider(
             color: Colors.black,
           ),
+          //BikeAccessoriesWidget(),
         ],
       ),
     );

@@ -5,7 +5,7 @@ class MainFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.all(50),
       color: Colors.black,
       width: double.infinity,
       height: 700,
@@ -22,7 +22,7 @@ class MainFooter extends StatelessWidget {
           Row(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(50),
                 child: Column(
                   children: <Widget>[
                     Text(
@@ -34,29 +34,12 @@ class MainFooter extends StatelessWidget {
                         letterSpacing: 5,
                       ),
                     ),
-                    Padding(padding: EdgeInsets.all(10)),
-                    /*FlatButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Contact Us'.toUpperCase(),
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 26,
-                        ),
-                      ),
-                    ),
-                    FlatButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Offers',
-                          style: TextStyle(color: Colors.white),
-                        )),*/
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(20)),
+              Spacer(),
               Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.all(50),
                 child: Column(
                   children: <Widget>[
                     Text(

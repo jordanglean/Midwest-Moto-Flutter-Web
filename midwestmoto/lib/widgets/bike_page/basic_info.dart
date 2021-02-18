@@ -2,6 +2,25 @@ import 'package:flutter/material.dart';
 
 // Basic Info Container
 class BasicBikeInfo extends StatelessWidget {
+  // Properties
+  final bikeBrandName;
+  final bikeModelName;
+  final bikeRegYear;
+  final bikeMiles;
+  final bikeOwners;
+  final bikeColor;
+
+  // Constructor
+  BasicBikeInfo({
+    @required this.bikeBrandName,
+    @required this.bikeModelName,
+    @required this.bikeRegYear,
+    @required this.bikeMiles,
+    @required this.bikeOwners,
+    @required this.bikeColor,
+  });
+
+  // Widget Build
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +34,7 @@ class BasicBikeInfo extends StatelessWidget {
           Row(
             children: [
               Text(
-                'Indian Motorcycle'.toUpperCase(),
+                bikeBrandName.toUpperCase(),
                 style: TextStyle(
                   fontSize: 18,
                 ),
@@ -27,7 +46,7 @@ class BasicBikeInfo extends StatelessWidget {
           Row(
             children: <Widget>[
               Text(
-                '2022 FTR 1200',
+                bikeModelName,
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
             ],
@@ -131,7 +150,7 @@ class BasicBikeInfo extends StatelessWidget {
                                   size: 50,
                                 ),
                                 Text(
-                                  'Reg Year:\n 2021',
+                                  'Reg Year:\n $bikeRegYear',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 25,
@@ -149,7 +168,7 @@ class BasicBikeInfo extends StatelessWidget {
                                   size: 50,
                                 ),
                                 Text(
-                                  'Miles:\n 0',
+                                  'Miles:\n $bikeMiles',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 25,
@@ -173,7 +192,7 @@ class BasicBikeInfo extends StatelessWidget {
                                   size: 50,
                                 ),
                                 Text(
-                                  'Owners:\n 1',
+                                  'Owners:\n $bikeOwners',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 25,
@@ -191,7 +210,7 @@ class BasicBikeInfo extends StatelessWidget {
                                   size: 50,
                                 ),
                                 Text(
-                                  'Colour:\n Black',
+                                  'Colour:\n $bikeColor',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 25,

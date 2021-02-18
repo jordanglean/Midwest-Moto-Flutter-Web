@@ -36,8 +36,6 @@ class Motorcycle {
     @required this.featured,
   }) {
     createImageList();
-    print(imageList);
-    print('Done======== !!');
   }
   // Create Image List for 360 view
   void createImageList() {

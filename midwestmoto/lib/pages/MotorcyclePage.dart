@@ -10,11 +10,13 @@ import 'package:midwestmoto/widgets/bike_page/basic_info.dart';
 import 'package:midwestmoto/widgets/bike_page/description.dart';
 import 'package:midwestmoto/widgets/bike_page/specs.dart';
 // Temp Data Set
-import 'package:midwestmoto/services/temp_local/local_data_set.dart';
+
 // Motorcycle Page
 
 class MotorcyclePage extends StatelessWidget {
-  var motorcycle = LocalDataSet();
+  final motorcycleData;
+  MotorcyclePage(this.motorcycleData);
+  //var motorcycle = LocalDataSet();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,10 +30,17 @@ class MotorcyclePage extends StatelessWidget {
               children: <Widget>[
                 // Image 360 View
                 ImageView360Container(
-                  imageList: motorcycle.motorcycleLocalDataSet[0].imageList,
+                  imageList: motorcycleData.imageList,
                 ),
                 // Motorcycle Description
-                BasicBikeInfo(),
+                BasicBikeInfo(
+                  bikeBrandName: motorcycleData.brandName,
+                  bikeModelName: motorcycleData.modelName,
+                  bikeRegYear: motorcycleData.regYear,
+                  bikeOwners: motorcycleData.numberOfOwners,
+                  bikeColor: motorcycleData.colour,
+                  bikeMiles: motorcycleData.totalMiles,
+                ),
               ],
             ),
             // Motorcycle Description
@@ -40,7 +49,9 @@ class MotorcyclePage extends StatelessWidget {
               width: double.infinity,
               child: Row(
                 children: <Widget>[
-                  MotorcycleDescription(),
+                  MotorcycleDescription(
+                    motorcycleDescription: motorcycleData.description,
+                  ),
                   Spacer(),
                   Specs(),
                 ],

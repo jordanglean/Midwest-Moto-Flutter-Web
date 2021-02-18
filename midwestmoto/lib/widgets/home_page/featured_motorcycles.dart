@@ -41,9 +41,7 @@ class FeaturedMotorcycleWidget extends StatelessWidget {
               children: <Widget>[
                 ...localDataSet.motorcycleLocalDataSet.map((bike) {
                   return FeaturedMotorcycleCardWidget(
-                    modelName: bike.modelName,
-                    previewImage: bike.previewImage,
-                    price: bike.price,
+                    motorcycleData: bike,
                   );
                 }).toList()
               ],

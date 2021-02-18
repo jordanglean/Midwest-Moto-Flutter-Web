@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:midwestmoto/pages/MotorcyclePage.dart';
+// Models
+import 'package:midwestmoto/models/motorcycle_model.dart';
 
 // Featured Motorcycle Widget Card
 class FeaturedMotorcycleCardWidget extends StatelessWidget {
-  // Properties
-  final AssetImage previewImage;
-  final String modelName;
-  final double price;
+  // Model
+  Motorcycle motorcycleData;
   // Constructor
   FeaturedMotorcycleCardWidget({
-    @required this.previewImage,
-    @required this.modelName,
-    @required this.price,
+    @required this.motorcycleData,
   });
 
   // Widget Build
@@ -35,7 +33,7 @@ class FeaturedMotorcycleCardWidget extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image(
-            image: previewImage,
+            image: motorcycleData.previewImage,
           ),
           Divider(
             color: Colors.black38,
@@ -47,7 +45,7 @@ class FeaturedMotorcycleCardWidget extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      modelName,
+                      motorcycleData.modelName,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 25,
@@ -71,7 +69,7 @@ class FeaturedMotorcycleCardWidget extends StatelessWidget {
           Spacer(),
           Center(
             child: Text(
-              '£' + price.toString(),
+              '£' + motorcycleData.price.toString(),
               style: TextStyle(
                 fontSize: 22,
                 color: Colors.black,
@@ -98,7 +96,7 @@ class FeaturedMotorcycleCardWidget extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return MotorcyclePage();
+                    return MotorcyclePage(motorcycleData);
                   }),
                 );
               },

@@ -55,6 +55,7 @@ flutter:
     - assets/images/indian_motorcycles/
     # Bike Images Assets for 360 View
     - assets/images/bikes/indian/ftr_base/
+    - assets/images/bikes/indian/ftr_carbon/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

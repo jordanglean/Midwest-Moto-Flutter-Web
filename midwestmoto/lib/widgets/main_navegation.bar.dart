@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:midwestmoto/RouteSettings.dart';
 
 // Main Navegation Bar
 class MainNavegationBar extends StatelessWidget {
@@ -25,6 +26,16 @@ class MainNavegationBar extends StatelessWidget {
               child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
+              FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, homeRoute);
+                },
+                child: Text(
+                  'Home'.toUpperCase(),
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(18.0)),
               FlatButton(
                 onPressed: () {},
                 child: Text(
@@ -53,13 +64,25 @@ class MainNavegationBar extends StatelessWidget {
               FlatButton(
                 onPressed: () {},
                 child: Text(
+                  'Events'.toUpperCase(),
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(padding: EdgeInsets.all(18.0)),
+              FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, servicingRoute);
+                },
+                child: Text(
                   'Servicing'.toUpperCase(),
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
               Padding(padding: EdgeInsets.all(18.0)),
               FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, offersRoute);
+                },
                 child: Text(
                   'Offers'.toUpperCase(),
                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -67,7 +90,9 @@ class MainNavegationBar extends StatelessWidget {
               ),
               Padding(padding: EdgeInsets.all(18.0)),
               FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, contactUsRoute);
+                  },
                   child: Text(
                     'Contact Us'.toUpperCase(),
                     style: TextStyle(fontWeight: FontWeight.bold),
