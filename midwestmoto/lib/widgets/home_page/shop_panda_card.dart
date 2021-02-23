@@ -6,12 +6,15 @@ class ShopHomeCards extends StatelessWidget {
   final cardTitle;
   final cardDescription;
   final imageLinkTemp;
+  final cardWidth;
+  final cardHeight;
 
-  ShopHomeCards({
-    @required this.cardTitle,
-    @required this.cardDescription,
-    @required this.imageLinkTemp,
-  });
+  ShopHomeCards(
+      {@required this.cardTitle,
+      @required this.cardDescription,
+      @required this.imageLinkTemp,
+      @required this.cardWidth,
+      @required this.cardHeight});
 
   // Widget Build
   @override
@@ -28,8 +31,8 @@ class ShopHomeCards extends StatelessWidget {
           )
         ],
       ),
-      width: 500,
-      height: 700,
+      width: cardWidth,
+      height: cardHeight,
       child: Column(
         children: <Widget>[
           Image.network(imageLinkTemp),

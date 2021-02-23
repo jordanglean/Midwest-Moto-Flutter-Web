@@ -6,7 +6,7 @@ import 'package:midwestmoto/models/motorcycle_model.dart';
 // Featured Motorcycle Widget Card
 class FeaturedMotorcycleCardWidget extends StatelessWidget {
   // Model
-  Motorcycle motorcycleData;
+  final Motorcycle motorcycleData;
   // Constructor
   FeaturedMotorcycleCardWidget({
     @required this.motorcycleData,

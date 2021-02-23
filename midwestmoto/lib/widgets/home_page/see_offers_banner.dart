@@ -2,6 +2,17 @@ import 'package:flutter/material.dart';
 
 // See Offer Banner Widget
 class SeeOfferWidget extends StatelessWidget {
+  // Properties
+  final double textFont;
+  final double containerMargin;
+  final double buttonWidth;
+  // Constructor
+  SeeOfferWidget({
+    @required this.containerMargin,
+    @required this.textFont,
+    @required this.buttonWidth,
+  });
+  // Widget Build
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,12 +29,12 @@ class SeeOfferWidget extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 35,
+              fontSize: textFont,
             ),
           ),
           ButtonTheme(
             height: 65,
-            minWidth: 120,
+            minWidth: buttonWidth,
             buttonColor: Colors.white,
             child: RaisedButton(
               onPressed: () {},

@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 
 // Home Page Banner
 class HomePageBanner extends StatelessWidget {
+  // Properties
+  final double imageContainerHeight;
+
+  // Constructor
+  HomePageBanner({@required this.imageContainerHeight});
+
+  // Widget Build
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
         Container(
-          height: 600,
+          height: imageContainerHeight,
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(

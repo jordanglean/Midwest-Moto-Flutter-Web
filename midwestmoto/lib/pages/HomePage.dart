@@ -1,11 +1,13 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:midwestmoto/RouteSettings.dart';
+import 'package:midwestmoto/widgets/home_page/see_offers_banner_mobile.dart';
 // Widget Imports
 // -- global widgets
 import 'package:midwestmoto/widgets/main_navegation.bar.dart';
 import 'package:midwestmoto/widgets/above_main_header_small_info_container.dart';
 import 'package:midwestmoto/widgets/footer.dart';
-import 'package:midwestmoto/widgets/main_res_navbar.dart';
 // -- local  imports
 import 'package:midwestmoto/widgets/home_page/home_page_top_banner.dart';
 import 'package:midwestmoto/widgets/home_page/home_page_brand_logo.dart';
@@ -13,6 +15,8 @@ import 'package:midwestmoto/widgets/home_page/our_story.dart';
 import 'package:midwestmoto/widgets/home_page/featured_motorcycles.dart';
 import 'package:midwestmoto/widgets/home_page/see_offers_banner.dart';
 import 'package:midwestmoto/widgets/home_page/shop_panda.dart';
+import 'package:midwestmoto/widgets/home_page/see_offers_banner.dart';
+import 'package:midwestmoto/widgets/home_page/shop_panda_responsive.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -70,19 +74,41 @@ class HomePage extends StatelessWidget {
                 ? MainNavegationBar()
                 : Padding(padding: EdgeInsets.all(0)),
             // Page Banner
-            HomePageBanner(),
+            (MediaQuery.of(context).size.width > 1000)
+                ? HomePageBanner(
+                    imageContainerHeight: 600,
+                  )
+                : HomePageBanner(
+                    imageContainerHeight: 400,
+                  ),
             // Brands Logo List
-            BrandsLogoListWidget(),
+            (MediaQuery.of(context).size.width > 1000)
+                ? BrandsLogoListWidget(
+                    isGridViewRequired: false,
+                  )
+                : BrandsLogoListWidget(
+                    isGridViewRequired: true,
+                  ),
             // Our Story Widget
-            OurStoryWidget(),
+            /*(MediaQuery.of(context).size.width > 1000)
+                ? OurStoryWidget(
+                    isMobile: false,
+                  )
+                : OurStoryWidget(
+                    isMobile: true,
+                  ),*/
             // Featured Motorcycle Widget Container
             FeaturedMotorcycleWidget(),
             // See Offer Widget
-            SeeOfferWidget(),
+            MediaQuery.of(context).size.width > 1000
+                ? SeeOfferWidget(
+                    containerMargin: 50, textFont: 30, buttonWidth: 120)
+                : SeeOfferMobileWidget(),
             // Shop Parts and Apparels
             Padding(padding: EdgeInsets.all(5)),
-            ShopPartAndApparel(),
-            // Temp Spacer
+            (MediaQuery.of(context).size.width > 1000)
+                ? ShopPartAndApparel()
+                : ShopCardMobile(),
             Padding(padding: EdgeInsets.all(20)),
             // Footer
             MainFooter(),
