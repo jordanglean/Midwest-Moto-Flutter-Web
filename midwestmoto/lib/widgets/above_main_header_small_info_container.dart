@@ -4,12 +4,9 @@ class AboveHeaderSmallContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
-        right: 200.0,
-      ),
       color: Colors.black,
       height: 30,
-      width: (MediaQuery.of(context).size.width),
+      width: double.infinity,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
@@ -37,7 +34,8 @@ class AboveHeaderSmallContainer extends StatelessWidget {
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
-          )
+          ),
+          Padding(padding: EdgeInsets.all(10)),
         ],
       ),
     );
